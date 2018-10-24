@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#printing files
+use strict; use warnings;
+
+my ($file) = @ARGV;
+my @lines;
+open (my $in, "< $file");
+#print "The file to be opened is $file\n";
+#print "Here are hte file\'s contents\n";
+#my $firstline = <$in>;
+#print "The first line of the file is $firstline\n";
+my $line_number = 0;
+while (my $line = <$in>){
+	push (@lines, $line);
+#	print "Line #$line_number: ";
+#	print "$line\n";
+	$line_number++;
+}
+print join("", @lines);
+close ($in);

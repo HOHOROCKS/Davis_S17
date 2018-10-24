@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#match
+use strict; use warnings;
+
+my $sequence = "AACTGGGAATTTTGGGG";
+my $empty_sequence = "";
+
+if ($sequence =~ m/a/i) {
+	print "I am here, thereforem// must match '$sequence'\n";
+}
+
+if ($empty_sequence =~ m//) {
+	print "I am here, therefore m// must match '$empty_sequence'\n"
+}
+
+my $g_count = ($sequence =~ tr/G/G/);
+print "The letter G occurs $g_count times in $sequence\n" 

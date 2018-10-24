@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+#cars
+use strict; use warnings;
+
+my @cars = ("Toyota", "Honda", "Ford");
+
+my $length = @cars;
+print "The lengths of my \@cars is $length";

@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+#swapping values
+use strict; use warnings;
+
+my ($x , $y) = ('10' , '20');
+my $z = $y;
+$y = $x;
+$x = $z;
+
+print "I swapped '$x' and '$y'";
+
+

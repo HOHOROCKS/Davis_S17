@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+#splitting arrays
+use strict; use warnings;
+
+my $sentence = "This is bobby joe jr";
+my @words = split(" ", $sentence);
+print "First word = '$words[0]', last word = '$words[-1]'\n";
+print "@words"

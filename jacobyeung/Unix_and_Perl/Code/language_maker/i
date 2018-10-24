@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+#
+use strict; use warnings;
+
+my $letter = @ARGV;
+my @individualletter = split (//,$letter);
+print "@individualletter";
+foreach(@individualletter){
+	
+	my $letter=ord($_);
+	$letter-=1;
+	print chr($letter)}

@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+#looping  backwards
+use strict; use warnings;
+
+my @data = @ARGV;
+
+#for (my $i = @data -1; $i >= 0; $i--) {
+#	print "$data[$i]\n";
+#}
+
+foreach (reverse(@data)) {
+#	print;
+	print "$_\n";
+}
+#foreach my $num (reverse(@data)){
+#	print "$num\n";
+#}
+
+#while (@data) {
+#	my $data = pop(@data);
+#	print "$data \n";
+#}

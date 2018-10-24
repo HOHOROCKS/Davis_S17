@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+#binding operator
+use strict; use warnings;
+
+my $text = "http://abcdefghi";
+
+$text =~ s@http://@@;
+
+my $length = length($text);
+die "Website link is too long" if ($length > 25); 
+
+$text = uc $text;
+
+my $ABC_Count = ($text =~ tr/ABC/ABC/);
+print "$ABC_Count\n";

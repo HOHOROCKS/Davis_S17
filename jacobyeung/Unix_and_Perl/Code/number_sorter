@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#number sorter
+use strict; use warnings;
+
+my @data = @ARGV;
+print "Before: @data\n";
+
+
+#sorts into ascending order
+@data = sort {$a <=> $b} @data;
+print "After:", join(", ", @data), "\n";
+
+my $sum = 0;
+
+for (my $i = 0; $i < @data; $i++) {
+	$sum += $data [$i];
+	print "$data[$i]", " $sum\n";
+}
+
+

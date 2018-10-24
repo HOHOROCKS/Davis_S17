@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#user input fizzbuzz
+use strict; use warnings;
+
+my ($number) = @ARGV;
+
+print "$number\n";
+
+if ($number % 15 == 0) {
+	print "fizzbuzz\n";
+}
+elsif ($number %3 == 0) {
+	print "fizz\n";
+}
+elsif ($number %5 == 0) {
+	print "buzz\n";
+}

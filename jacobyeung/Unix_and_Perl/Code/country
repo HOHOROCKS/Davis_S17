@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#country
+use strict; use warnings;
+
+my ($country) = @ARGV;
+die "Population of only ONE country.\n" unless (@ARGV == 1);
+
+my %population = (
+	France	=> "fr",
+	China	=> "cn",
+	Africa	=> "af",
+);
+
+if (exists($population{$country})) {
+	print "$country = $population{$country}\n";
+}
+else {
+	print "Country does not exist\n";
+}

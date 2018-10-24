@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+#word finder
+use strict; use warnings;
+#finds words in a file and prints them and they're amount out
+
+die "Must input file or word or letter\n" if (@ARGV != 2);
+
+my ($file, $word_or_letter) = @ARGV; 
+die "Must specify word or letter\n" unless ($ARGV[1] eq "word" or "letter");
+my %wordcount;
+my %lettercount;
+
+open (my $in, "<$file") or die "Can't open $file\n";
+
+while (my $words = <$in>){
+	chomp $words;
+	my @individualword = split(/\s+/, $words);
+	my @individualletter = split(//, $words);
+	foreach my $word (@individualword){
+		chomp $word;
+		if (not exists $wordcount{$word}){
+			$wordcount{$word} = 1
+		}
+		else {
+			$wordcount{$word}++
+		}
+	}
+	for my $letter (@individualletter){
+		chomp $letter;
+		if (not exists $lettercount{$letter}){
+			$lettercount{$letter} = 1;
+		}
+		else {
+			$lettercount{$letter}++;
+		}
+	}
+}
+
+if ($word_or_letter eq 'word'){
+	foreach my $word (sort {$wordcount{$b} eq $wordcount{$a}} keys %wordcount){
+		print "$word\t$wordcount{$word}\n";
+	}
+}
+elsif ($word_or_letter eq 'letter'){
+	foreach my $letter (sort {$lettercount{$b} eq $lettercount{$a}} keys %lettercount){
+		print "$letter\t$lettercount{$letter}\n";
+	}
+}
+
+close($in);

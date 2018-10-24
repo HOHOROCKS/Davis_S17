@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+#superhero
+use strict; use warnings;
+
+while (my $text = <>){
+	chomp $text;
+	if ($text =~ m/[a-z]{2}[ ]?[0-9]{5}/i){
+		print "The address is $text\n";
+	}
+	elsif ($text =~ m/^\w{2}$/i){
+		print "The address is missing a zip code\n";
+	}
+	elsif ($text =~ m/^\d/){
+		print "The address is missing a state\n";
+	}
+	else {	
+		print "The address is not available\n";
+	}
+}

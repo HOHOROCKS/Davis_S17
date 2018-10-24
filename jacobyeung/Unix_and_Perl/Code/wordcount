@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+#wordcounter
+use strict; use warnings;
+
+my %count;
+foreach my $word (@ARGV) {$count{$word}++};
+
+foreach my $word (keys %count){
+	print "$word\t$count{$word}\n";
+}

@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+#
+use strict; use warnings;
+
+my %hash = (bob => 1, bam => 3);
+my %count = keys %hash;
+print "'%count'\n";

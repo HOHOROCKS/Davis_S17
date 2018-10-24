@@ -1,0 +1,46 @@
+public class SpaceNeedle{
+	public static final int SIZE = 4;
+
+	public static void main(String[] args){
+	//Needle();
+	Uptriangle();
+	//Downtriangle();
+	}
+	public static void Needle() {
+		for (int j = 1; j <= SIZE; j++){
+			for (int i = 1; i <= SIZE * 3; i++){
+				System.out.print(" ");
+			}
+			System.out.print("| |");
+			for (int i =1; i <= SIZE * 3; i++){
+				System.out.print(" ");
+			}
+		System.out.println("");
+		}
+	}
+	public static void Uptriangle() {
+		for (int j = 1; j <= SIZE; j++){
+			for(int i = SIZE * 2 - 2; i >= j; i--){
+				System.out.print("__/");
+				
+			
+			}
+			System.out.println("");
+		}
+	}
+	public static void Downtriangle() {
+		for (int i = 1; i <= SIZE; i++){
+			for(int j = 1; j <= i; j++){
+				System.out.print(" ");
+			}
+			System.out.print("\\_");
+			for(int j = 1; j <= SIZE; j++){
+				for (int k = SIZE; k >= j; k--){ 
+				System.out.print("/\\");
+				} 
+			}
+			System.out.println("");
+			
+		}
+	}
+}

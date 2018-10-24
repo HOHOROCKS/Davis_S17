@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+#sorting
+use strict; use warnings;
+
+my @data = qw(3.14 1000 21 red blue yellow);
+print "before: @data\n";
+@data = sort {$a cmp $b} @data;
+print "after: @data\n";
+reverse (@data);
+print "@data\n";

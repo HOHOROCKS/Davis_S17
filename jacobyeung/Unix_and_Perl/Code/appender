@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+#appender
+use strict; use warnings;
+
+die "Please specify file name.\n" if (@ARGV < 1);
+my ($infile) = @ARGV;
+
+my $name = "Jacob Yeung";
+
+open (my $out, ">>$infile") or die "error reading $infile\n";
+print $out "$name\n";
+close $out;

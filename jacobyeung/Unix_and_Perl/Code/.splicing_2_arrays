@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+#using splice on 2 arrays
+use strict; use warnings;
+
+my @bob = qw(1 2 3 4 5);
+my @joe = qw(6 7 8 9 10);
+
+my $middle_of_array = int(@bob/2);
+print "$middle_of_array\n";
+
+splice @bob, $middle_of_array, 1, @joe;
+print "@bob";
